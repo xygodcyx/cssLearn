@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas, monospace;
+}
+
+body {
+  background-color: #222;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  p {
+    font-size: 2em;
+    color: #fff;
+  }
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.current h2::before {
+    color: #5cff7a;
+    border-right: 2px solid #fff;
+  }
+  h2 {
+    position: relative;
+    font-size: 12em;
+    line-height: 1em;
+    color: #444;
+    transition: all 1s ease-in-out;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      overflow: hidden;
+      width: 0;
+      color: #fff;
+      transition: width 1s ease;
+    }
+    &.active::before {
+      width: 100%;
+    }
+  }
+}
