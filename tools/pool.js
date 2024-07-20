@@ -35,7 +35,7 @@ function pollGet(type = 'div') {
     let element = document.createElement(type)
     pool.push(element)
     result = element
-    // console.log('created new element')
+    console.log('created new element')
   }
   result.style.visibility = 'visible'
   return result

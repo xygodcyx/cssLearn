@@ -1,10 +1,10 @@
 let cloud = document.querySelector('.cloud')
 // 665
 // let allChars = '你好小倩'
-let allChars = '!@#$%^&'
+let allChars = '我爱你'
 function randonText() {
-  let randomIndex = Math.floor(Math.random() * allChars.length)
-  return allChars[randomIndex].toLocaleUpperCase()
+  let randomIndex = Math.floor(Math.random() * allChars.pointLength())
+  return allChars.pointCharAt(randomIndex).toLocaleUpperCase()
 }
 
 function rain() {

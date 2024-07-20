@@ -20,8 +20,9 @@ function createStar(e) {
   let size = Math.floor(Math.random() * 2)
   let rotate = Math.floor(Math.random() * 360)
   star.style.transform = `rotate(${rotate}deg)`
-  star.style.fontSize = 0.5 + size + 'rem'
+  star.style.fontSize = 2 + size + 'rem'
   star.style.left = x + 'px'
+  // star.innerText = '我爱你'.charAt(Math.floor(Math.random() * 3))
   star.style.top = y + 'px'
   star.classList.remove('star')
   star.offsetHeight //quick hack to force repaint

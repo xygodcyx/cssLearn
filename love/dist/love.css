@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bad Script', cursive;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left bottom, #f77062, #fe5196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
