@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <title>waveBorder</title>
+    <link
+      rel="stylesheet"
+      href="dist/waveBorder.css" />
+    <script src="../tools/pool.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <h1>waveBorder</h1>
+          <p>
+            waveBorder is a lightweight and easy-to-use CSS library for creating beautiful and
+            unique wave borders for any HTML element. svg-based waveBorder is a modern and
+            lightweight way to create borders with a unique and beautiful look.
+          </p>
+        </div>
+      </div>
+    </div>
+    <svg>
+      <filter id="wavy">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.02"
+          numOctaves="5"
+          seed="2">
+          <animate
+            attributeName="baseFrequency"
+            values="0.02;0.05;0.02"
+            dur="100s"
+            repeatCount="indefinite"></animate>
+        </feTurbulence>
+
+        <feDisplacementMap
+          in="SourceGraphic"
+          scale="30"></feDisplacementMap>
+      </filter>
+      <filter id="wavy2"></filter>
+    </svg>
+    <svg>
+      <filter id="text">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.002"
+          numOctaves="5"
+          seed="2">
+          <animate
+            attributeName="baseFrequency"
+            values="0.002;0.005;0.002"
+            dur="100s"
+            repeatCount="indefinite"></animate>
+        </feTurbulence>
+
+        <feDisplacementMap
+          in="SourceGraphic"
+          scale="10">
+          <animate
+            attributeName="scale"
+            values="10;30;10"
+            dur="100s"
+            repeatCount="indefinite"></animate>
+        </feDisplacementMap>
+      </filter>
+      <filter id="wavy2"></filter>
+    </svg>
+
+    <script src="waveBorder.js"></script>
+  </body>
+</html>
